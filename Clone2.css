@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
 }
+/*The CSS for the nav bar*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -9,9 +10,11 @@
     color: #fff;
     padding: 10px 20px;
 }
+/*Setting the menu display none to hide it above 800px*/
 .menu{
     display: none;
 }
+/*The CSS for the search bar*/
 .search-bar {
     flex: 1;
     margin-left: 33%;
@@ -31,14 +34,17 @@
 body{
     background-color: lightgrey;
 }
+/*Setting grid to 55/45 to fit the required output*/
 .container {
     display: grid;
     grid-template-columns: 55% 45%;   
     margin: 1% 13% 0% 13%;
 }
+/*Setting grid value for left section to 1 to style it to required output*/
 #left{
     grid-column: 1;
 }
+/*Styling the columns for each setion*/
 .part{
     margin:5px;
     display:flex;
@@ -49,6 +55,7 @@ body{
 .part1{
     box-shadow: 2px 2px 5px grey;
 }
+/*doing the same in this section but setting the grid to 50/50 to match the required output*/
 #right{
     grid-column: 2;
     display: grid;
@@ -75,6 +82,7 @@ body{
     background-color: white;
     box-shadow: 2px 2px 5px grey;
 }
+/*Setting the CSS for the contents*/
 h2{
     margin-top: 10px;
     margin-left: 5px;
@@ -89,6 +97,7 @@ p{
 img{
     width: 100%;
 }
+/*Setting the CSS for the nav bar items*/
 a{
     text-decoration: none;
     color: white;
@@ -110,11 +119,13 @@ footer{
     text-align: center;
     margin: 20px;
 }
+/*Setting the media query for above 1280px screen*/
 @media screen and (min-width: 1281px){
     .container{
         grid-template-columns: 55% 45%;
     }
 }
+/*setting the media query for the 1024-1280px screen*/
 @media screen and (max-width: 1280px) {
     .container{
         margin: 1% 3% 0% 3%;
@@ -124,6 +135,7 @@ footer{
         margin-right: 25%;
     }
 }
+/*setting the media query for the 800-1024px screen*/
 @media screen and (max-width: 1024px) {
     .container{
         grid-template-columns: 65% 35%;
@@ -135,6 +147,7 @@ footer{
     #right{
         grid-template-columns: 100%;
     }
+    /*settin the grid value to 1 to move all the contens in 1 vertical line*/
     .part2{
         grid-column: 1;
     }
@@ -148,19 +161,25 @@ footer{
         grid-column: 1;
     }
 }
+/*setting the media query for the 480-800px screen*/
 @media screen and (max-width: 800px){
+    /*combining the columns into one to meet the required output*/
     .container{
         grid-template-columns: 100%;
     }
+    /*hiding the search bar*/
     .search-bar{
         display: none;
     }
+    /*changing the menu display*/
     .menu{
         display: block;
     }
+    /*hiding the rest to meet the requirements*/
     .main-menu{
         display: none;
     }
+    /*reverting the grid values to meet the requirements*/
     #right{
         grid-column: 1;
         display: grid;
@@ -180,6 +199,7 @@ footer{
         grid-column: 2;
     }
 }
+/*setting the media query fot the below 480px screen*/
 @media screen and (max-width: 480px){
     .container{
         display: grid;
@@ -191,6 +211,7 @@ footer{
     .main-menu{
         display: none;
     }
+    /*setting the grid values to 1 to make everything vertical in a single line*/
     #right{
         grid-column: 1;
         display: grid;
