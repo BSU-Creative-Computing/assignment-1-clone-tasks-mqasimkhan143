@@ -3,12 +3,31 @@
     margin: 0;
 }
 .container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+.left{
+    grid-column: 1;
+}
+.right{
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.right part-part2{
+    grid-column: 1;
+}
+.right part-part3{
+    grid-column: 2;
+}
+.right part-part4{
+    grid-column: 1;
+}
+.right part-part5{
+    grid-column: 2;
 }
 img{
-    max-width: 100%;
-    height: auto;
+    width: 100%;
 }
 .navbar {
     display: flex;
@@ -39,14 +58,8 @@ a{
     margin-top: 3px;
 }
 @media screen and (min-width: 1280px){
-    .part1{
-        flex-basis: 40%;
-    }
-    .part2{
-        flex-basis: 30%;
-    }
-    .part3{
-        flex-basis: 30%;
+    .container{
+        grid-template-columns: 55% 45%;
     }
 }
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
